@@ -1,7 +1,8 @@
-from src.configure import HOST
-from socket import socket, AF_INET, SOCK_STREAM
 import threading
 import tkinter as tk
+from socket import socket, AF_INET, SOCK_STREAM
+
+from configure import HOST
 
 
 # Thread class to connect with server
