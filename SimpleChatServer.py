@@ -44,6 +44,7 @@ s = socket(AF_INET, SOCK_STREAM)
 s.bind((HOST,PORT))
 s.listen()
 
+#----Main-----#
 while True:
     try:
         c_sock, c_addr = s.accept()

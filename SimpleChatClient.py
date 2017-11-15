@@ -1,13 +1,15 @@
+from src.configure import HOST
 from socket import socket, AF_INET, SOCK_STREAM
 import threading
 import tkinter as tk
+
 
 # Thread class to connect with server
 class Connector(threading.Thread):
     def __init__(self, text):
         threading.Thread.__init__(self)
         self.text = text
-        self.HOST = '143.248.55.143'
+        self.HOST = HOST
         self.PORT = 10000
         self.s = socket(AF_INET,SOCK_STREAM)
         self.s.connect((self.HOST, self.PORT))
